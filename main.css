@@ -1,0 +1,120 @@
+.container {
+    margin-top: 0px;
+    padding: 10px 50px 10px 50px;
+    background-color: rgb(224, 223, 223);
+    /* border: 1px solid black; */
+
+}
+
+
+.header {
+    display: flex;
+    margin: 20px;
+    margin-top: auto;
+    height: auto;
+    background-color: rgb(117, 208, 250);
+}
+
+.header-menu {
+    margin: auto;
+    padding: 20px;
+    width: 20%;
+    background-color: rgb(138, 135, 133);
+    border-radius: 7px;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+.header-menu-hover{
+    background-color: rgb(228, 104, 21);
+}
+
+
+
+.img {
+    margin: auto;
+    padding: 20px;
+    width: auto;
+
+}
+
+.taxt-about {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: larger;
+    text-align: justify;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+.font-f{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(56, 5, 5);
+    background-color: blueviolet;
+}
+
+
+
+.tt{
+    display: inherit;
+    flex-direction: inherit;
+    flex-grow: inherit;
+    height: inherit;
+    justify-content: inherit;
+    min-width: inherit;
+    width: inherit;
+}
+
+
+
+@media (max-width: 768px) and (max-width: 1024px) {
+    #cssmenu #menu-button::before {
+        content: '';
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        display: block;
+        width: 15px;
+        height: 3px;
+        border-top: 2px solid #000000;
+        border-bottom: 2px solid #000000;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-child {
+    /* position: relative; */
+    /* position:absolute; */
+    width: auto;
+    background: #e9cdcd;
+    border-radius: 5px;
+    border-color: black;
+    box-shadow: 0 20px 40px 0 rgba(14, 31, 53, .3);
+    padding: 10px 20px;
+    margin-top: 10px;
+
+
+}
+
+.box {
+
+    height: auto overflow-y: scroll;
+    overflow-x: scroll;
+    margin: 30px;
+    padding: 30px;
+    border: 1px solid rgb(35, 34, 36);
+
+}
