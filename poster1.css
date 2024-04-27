@@ -1,13 +1,13 @@
 .poster {
   font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
-  background-color: #a6cee1;
+  /* font-optical-sizing: auto; */
+  /* background-color: #a6cee1; */
   width: 550px;
   height: 700px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid rgb(35, 86, 161);
+  border: 5px solid rgb(35, 86, 161);
 }
 
 .services-div{
@@ -24,9 +24,9 @@
   position: relative;
   height: 30px;
   width: 20px;
-  background-color: rgba(201, 39, 39,.7);
-  transition: 0.5s ease-in-out;
-  transform: rotate(0deg);
+  background-color: rgba(239, 113, 10, 0.7);
+  /* transition: 0.5s ease-in-out; */
+  /* transform: rotate(0deg); */
 }
 .top-bar:hover {
   width: 550px;
