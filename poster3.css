@@ -1,0 +1,49 @@
+.poster-container{
+    height: 750px;
+    width: 400px;
+    border-radius: 20px;
+    border:1px solid #807979;
+    margin:50px auto;
+    background-color: #a18b65;
+}
+.div-white{
+    position: relative;
+    height: 150px;
+    width: 300px;
+    top:450px;
+    left: 18px;
+    background-color: #fff3d6;
+    z-index: 1;
+}
+.div-black{
+    position: relative;
+    height: 650px;
+    width: 100px;
+    top:-100px;
+    left:250px;
+    background-color: #171728;
+}
+.div-text-top{
+    font-family: "Zilla Slab", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    padding: 15px;
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    color: white;
+}
+.div-text-bottom{
+    font-family: "Zilla Slab", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 15px;
+    padding: 15px;
+    position: absolute;
+    height: 500px;
+    width: 200px;
+    color: #171728;
+    top:706px;
+
+}

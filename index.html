@@ -3,18 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMSWEB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="indexstyle.css">
+
+    <title>Responsive Navbar</title>
 </head>
 <body>
-    <div class="container">
-        <div class="nav-bar">
-            <div>
-                <p>
-                    Welcome to Excel  Online Services.
-                </p>
-                <p>Code by Shailu</p>
-            </div>
+    <header>
+        <div class="navbar">
+            <div class="logo"> <a href="#">Deepak Vishwakarma</a> </div>
+            <ul class="links">
+                <li><a href="home">Home</a></li>
+                <li><a href="home">Services</a></li>
+                <li><a href="home">Case Study</a></li>
+                <li><a href="home">Contact</a></li>
+                <li><a href="home">Learn More</a></li>
+            </ul>            
+            <a href="#" class="action_btn">Get Started</a>
+            <div class="toggle_btn"><i class="fa fa-bars"></i></div>
         </div>
-    </div>
+        <div class="dropdown_menu">            
+                <li><a href="hero">Home</a></li>
+                <li><a href="home">Services</a></li>
+                <li><a href="home">Case Study</a></li>
+                <li><a href="home">Contact</a></li>
+                <li><a href="home">Learn More</a></li>
+                <li> <a href="#" class="action_btn">Get Started</a></li>
+        </div>
+        
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Welcome</h1>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>Doloremque modi ipsam iure beatae iusto eveniet laudantium veritatis eaque, impedit nemo in corrupti officia cupiditate, ut consequuntur reprehenderit similique ex vel.</p>
+            
+        </section>
+
+
+    </main>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+        toggleBtn.onclick= function(){
+            dropDownMenu.classList.toggle('open')
+            const isopen= dropDownMenu.classList.contains('open')
+            toggleBtnIcon.classList = isopen ? 'fa fa-close' :'fa fa-bars'
+        }
+    </script>
 </body>
 </html>
