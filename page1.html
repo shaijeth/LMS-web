@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="page1.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="click-btn-add" class="click-btn">Add</div>
+    <div id="click-btn-multi" class="click-btn">Multiply</div>
+    <div id="click-btn-sub" class="click-btn">Subtract</div>
+    <div class="dropdown_menu">
+      <li><a href="hero">Home</a></li>
+      <li><a href="home">Services</a></li>
+      <li><a href="home">Case Study</a></li>
+      <li><a href="home">Contact</a></li>
+      <li><a href="home">Learn More</a></li>
+      <li><a href="#" class="action_btn">Get Started</a></li>
+    </div>
+    <div id="about-div" class="about-div">This is about me</div>
+    <div id="service-div" class="service-div">This is my Service</div>
+    <div id="div-name">Deepak</div>
+    <script>
+      var a = 10;
+      var b = 5;
+     
+      var dob = "2024-02-07";
+      var msg = "Shailu ";
+      var p = "India ";
+      var q = " LOVE ";
+
+      const divname = document.getElementById("div-name");
+      const divabout = document.getElementById("about-div");
+      const divservice = document.getElementById("service-div");
+      
+      const btnadd = document.getElementById("click-btn-add");
+      const btnmulti = document.getElementById("click-btn-multi");
+      const btnsub = document.getElementById("click-btn-sub");
+      btnadd.onclick= function(){
+        var c = a + b;
+        divservice.innerText="a+ b ="+c
+      }
+      btnmulti.onclick= function(){
+        var c = a * b;
+        divservice.innerText="a * b ="+c
+      }
+      btnsub.onclick= function(){
+        var c = a - b;
+        divservice.innerText="a - b ="+c
+      }
+   </script>
+  </body>
+</html>
+
+
