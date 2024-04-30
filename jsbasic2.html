@@ -5,23 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        
+    </style>
 </head>
 
 <body>
-    <div id="muldhan"></div>    
-    <div id="byaj"></div>   
-    <div id="mishrdhan"></div>
+    <table >
+        <tr>
+           <td> A= </td> <td> <div id="div-A"> </div> </td>
+        </tr>
+        <tr>
+            <td> B= </td> <td> <div id="div-B"> </div> </td>
+         </tr>
+         <tr>
+            <td> C= </td> <td> <div id="div-C"> </div> </td>
+         </tr>
+    </table>
+
 
     <script>
-        let muldhan = 5000
-        let byaj = 15
-        let samay = 2
-        let mishrdhan = 0
+        let a = 5, b = 10
+        let c = a + b
 
-        mishrdhan = muldhan + (muldhan * byaj / 100)
-        document.getElementById("muldhan").innerText= muldhan
-        document.getElementById("byaj").innerText= byaj+"%"
-        document.getElementById("mishrdhan").innerText= mishrdhan
+        document.getElementById("div-A").innerText = a
+        document.getElementById("div-B").innerText = b
+        document.getElementById("div-C").innerText = c
     </script>
 
 </body>
