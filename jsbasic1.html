@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic of Javascript</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .div-value{
+            color: red;
+        }
+
+        td{
+            color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div style="margin: auto auto 30px auto;width: 50%; text-align: center; font-size: 20; font-weight:bold;">Mark sheet
+    </div>
+    <table style="width: 60%; border: 1px solid grey;margin: auto;">
+        <tr>
+            <td class="div-caption">Student Name :</td>
+            <td>
+                <div id="div-name"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="div-caption">Date of Birth :</td>
+            <td>
+                <div id="div-dob"></div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Subject</td>
+            <td>Max Marks</td>
+            <td>Obtained</td>
+        </tr>
+        <tr>
+            <td>Hindi</td>
+            <td>100</td>
+            <td><div class="div-value" id="div-hindi"></div></td>
+        </tr>
+        <tr>
+            <td>Maths</td>
+            <td>100</td>
+            <td><div  class="div-value"  id="div-math"></div></td>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td>100</td>
+            <td><div  class="div-value"  id="div-science"></div></td>
+        </tr>        
+        <tr>
+            <td>English</td>
+            <td>100</td>
+            <td><div  class="div-value" id="div-english"></div></td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>400</td>
+            <td><div  class="div-value" id="div-total"></div></td>
+        </tr>
+        <tr>
+            <td>Per</td>
+            <td></td>
+            <td><div class="div-value"  id="div-perc"></div></td>
+        </tr>
+    </table>
+
+    <script>
+        //variable
+        const maxmark = 400
+        let studentname = "Deepak Vishwakarma"
+        let dob = new Date("1978-08-16")
+        let male = true
+        let email = "deepak@gmail.com"
+        let mobile = "8682030703"
+        let maths = 78.3
+        let hindi = 45.6
+        let science = 55.2
+        let english = 88.8
+        let totalobtain=hindi+maths+science+english
+
+        let percantage= (totalobtain/maxmark)*100
+
+        document.getElementById("div-name").innerText = studentname
+        document.getElementById("div-dob").innerText = dob.toDateString()
+        document.getElementById("div-hindi").innerText = hindi
+        document.getElementById("div-math").innerText = maths
+        document.getElementById("div-science").innerText = science
+        document.getElementById("div-english").innerText = english
+        document.getElementById("div-total").innerText =Math.round(totalobtain)
+        document.getElementById("div-perc").innerText =Math.round(percantage)+"%"
+
+    </script>
+</body>
+
+</html>

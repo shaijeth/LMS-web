@@ -8,7 +8,9 @@
   </head>
 
   <body>
-    <div id="click-btn-add" class="click-btn">Add</div>
+    <div id="click-btn-add" class="click-btn">Add 
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum itaque totam deleniti enim veniam debitis? Doloremque, dignissimos esse ipsa pariatur, recusandae magni vel explicabo obcaecati nam eveniet quas magnam expedita.</p>
+    </div>
     <div id="click-btn-multi" class="click-btn">Multiply</div>
     <div id="click-btn-sub" class="click-btn">Subtract</div>
     <div class="dropdown_menu">
@@ -34,10 +36,21 @@
       const divname = document.getElementById("div-name");
       const divabout = document.getElementById("about-div");
       const divservice = document.getElementById("service-div");
-      
-      const btnadd = document.getElementById("click-btn-add");
-      const btnmulti = document.getElementById("click-btn-multi");
-      const btnsub = document.getElementById("click-btn-sub");
+      const btn = document.querySelector("#click-btn-add");  
+      // const btnadd = document.getElementById("click-btn-add");
+      // const btnmulti = document.getElementById("click-btn-multi");
+      // const btnsub = document.getElementById("click-btn-sub");
+    btn.onclick= function(){
+      // if(this.innerText=="Add")
+      // {
+      //   this.innerText="EDIT"
+      // }
+      // else
+      // {
+      //   this.innerText="Add"
+      // }
+      this.classList.toggle('open')
+    }
       btnadd.onclick= function(){
         var c = a + b;
         divservice.innerText="a+ b ="+c

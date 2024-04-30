@@ -24,7 +24,18 @@
   cursor: pointer;
   transition: scale 0.2 ease;
   width: 150px;
+  margin: 10px;
 }
+.click-btn.open p{
+  background-color: orange;
+   height: 250px;
+   display: block;
+}
+.click-btn p{
+  display: none;
+  padding-top: 10px;
+}
+
 a {
     text-decoration: none;
     color: #fff;
