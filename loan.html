@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loan</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <p>Welcome to Loan Calculator </p>
+        </div>
+        <table>
+            <tr>
+                <td>Loan Amount </td>
+                <td> <input type="number" id="textamount" /> </td>
+            </tr>
+
+            <tr>
+                <td> Year </td>
+                <td> <input type="number" min="1" max="50" id="textyear" value="" /> </td>
+            </tr>
+
+            <tr>
+                <td>Rate of Intrest </td>
+                <td> <input type="number" id="textintrest" /> </td>
+            </tr>
+
+            <tr>
+                <td>Total Intrest Amount </td>
+                <td>
+                    <div id="divtotal"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button id="btn"> Calculate </button>
+                </td>
+            </tr>
+
+
+        </table>
+
+    </div>
+
+
+    <script>
+        const btn = document.getElementById("btn");
+        btn.onclick = function () {
+            let loanamount = parseInt(document.getElementById("textamount").value);
+            let Year = parseInt(document.getElementById("textyear").value);
+            let RateofIntrest = parseFloat(document.getElementById("textintrest").value);
+
+            if (loanamount <= 0|| Year<=0 ) {
+                document.getElementById("divtotal").innerText = "Year and Loan amount can not zero or negative";
+            }
+            else {
+                let totalamount = ((loanamount) + ((loanamount * RateofIntrest) / 100) * Year);
+                document.getElementById("divtotal").innerText = totalamount;
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>
