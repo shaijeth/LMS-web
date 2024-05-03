@@ -13,6 +13,14 @@
             <p>Welcome to Loan Calculator </p>
         </div>
         <table>
+
+            <tr>
+                <td>Gender </td>
+                <td> <input type="radio" id="male" name="Gender" value="Male" > <label for="male"> Male </label>
+                    <input type="radio" id="female" name="Gender" value="Female" ><label for="male"> Female </label>
+                    <input type="radio" id="thirdgender" name="Gender" value="Thirdgender" ><label for="male"> Thirdgender</label>
+                </td>
+            </tr>
             <tr>
                 <td>Loan Amount </td>
                 <td> <input type="number" id="textamount" /> </td>
@@ -52,7 +60,31 @@
         btn.onclick = function () {
             let loanamount = parseInt(document.getElementById("textamount").value);
             let Year = parseInt(document.getElementById("textyear").value);
-            let RateofIntrest = parseFloat(document.getElementById("textintrest").value);
+            // let RateofIntrest = parseFloat(document.getElementById("textintrest").value);
+            
+            let RateofIntrest =0;
+            if(loanamount>0 && loanamount <=5000 ){
+                RateofIntrest=10;
+            } else if(loanamount>5000 && loanamount <=10000 ){
+                RateofIntrest=8;
+            } else if(loanamount>10000 && loanamount <=15000 ){
+                RateofIntrest=7;
+            } else if(loanamount>15000 && loanamount <=20000 ){
+                RateofIntrest=6.75;
+            } else {
+                RateofIntrest= 5;
+            }
+
+            let Gender=document.getElementsByName("Gender");
+            if(Gender[1].checked){
+                RateofIntrest=RateofIntrest-1;}
+            //  else if (Gender[1].checked){
+            //     RateofIntrest=RateofIntrest-1;}
+                if(Gender[2].checked){
+                RateofIntrest=RateofIntrest-2;}
+                
+
+            document.getElementById("textintrest").value= RateofIntrest;
 
             if (loanamount <= 0|| Year<=0 ) {
                 document.getElementById("divtotal").innerText = "Year and Loan amount can not zero or negative";

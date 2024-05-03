@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration </title>
+</head>
+
+<body>
+    <div>
+        Registration Form
+    </div>
+
+    <form name="Registerform" onsubmit="validateform()">
+
+        <table>
+            <tr>
+                <td> <label for="fname"> Full Name </label> </td>
+                <td> <input type="text" id="fname" name="fname" required> </td>
+            </tr>
+
+            <tr>
+                <td> <label for="mobile"> Mobile </label> </td>
+                <td> <input type="text" id="mobile" name="mobile" required> </td>
+
+            </tr>
+            <tr>
+                <td> <label for="dob"> Date of Birth </label> </td>
+                <td> <input type="date" id="dob" name="dob" required> </td>
+
+            </tr>
+
+            <tr>
+                <td> <label for="email"> Email </label> </td>
+                <td> <input type="text" id="email" name="email" required> </td>
+            </tr>
+
+            <tr>
+                <td> <label for="location"> Location </label> <br> <label> Enter Your Citi With State Name </label>
+                </td>
+
+                <td> <input type="text" id="location" name="location" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td> <input type="submit" id="regbtn" value="Register Now"> </td>
+
+            </tr>
+
+        </table>
+    </form>
+
+    <script>
+        function validateform() {
+            let fname = document.forms["Registerform"]["fname"].value;
+            let mobile = document.forms["Registerform"]["mobile"].value;
+            let dob = document.forms["Registerform"]["dob"].value;
+            let email = document.forms["Registerform"]["email"].value;
+            if (fname == "") {
+                alert("Please Enter Name")
+            }
+            if (mobile.length != 10) {
+                alert("Fill Correct Number")
+            }
+            
+            const fs=require ('fs');
+            const data={
+                fname:fname
+
+            }; 
+            const jsonData=JSON.stringify(data);
+            fs.writeFile('data.json',jsonData);
+
+        }
+    </script>
+
+
+</body>
+
+</html>
