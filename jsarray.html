@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label id="lblcountry">
+        Country List
+    </label>
+    <label id="ginti">
+        
+    </label>
+    
+    <table border="1">
+        <thead>
+            <th>Contry Name</th>
+            <th>Capital</th>
+            <th>Population</th>
+        </thead>
+        <tbody id="tblcountry">
+
+        </tbody>
+    </table>
+
+
+    <script>
+        const limitof = 5;
+        let population = 0;
+        var country = ["Zimbabwe","Brazil","Korea", "India", "Iran", "Australia", "Srilanka", "America", "Japan", "Nepal", "Cuba"];
+        country.sort();
+        country.reverse();
+        var listofcountry = "";
+
+        for (let c of country) {
+           
+                listofcountry += `<tr>`;
+
+                listofcountry += `<td>`;
+                listofcountry += `${c}`;
+                listofcountry += `</td>`;
+                
+                listofcountry += `<td>`;
+                listofcountry += `col2`;
+                listofcountry += `</td>`;
+
+                listofcountry += `<td>`;
+                listofcountry += `col3`;
+                listofcountry += `</td>`;
+                
+
+                listofcountry += `</tr>`;
+           
+        }
+        document.getElementById("tblcountry").innerHTML = listofcountry;
+
+        var gino="<br>";
+        for(let i=0; i<country.length; i=i+1)
+        {
+            gino+=i+1+"."
+            gino+=country[i]+"<br>";
+        }
+        document.getElementById("ginti").innerHTML=gino;
+    </script>
+
+
+</body>
+
+</html>

@@ -9,11 +9,15 @@
 
 <body>
     <div>
+        <a href="registration.html">New Customer</a>
         <div>
             <p>Welcome to Loan Calculator </p>
         </div>
+        <div>
+            <label>Name :</label>
+            <label id="fname" style="color: red;"></label>
+        </div>
         <table>
-
             <tr>
                 <td>Gender </td>
                 <td> <input type="radio" id="male" name="Gender" value="Male" > <label for="male"> Male </label>
@@ -56,8 +60,15 @@
 
 
     <script>
+        console.log("JS started at : "+Date().toString());
         const btn = document.getElementById("btn");
+        let cusname= localStorage.getItem("fname");
+        let cusmobile= localStorage.getItem("mobile");
+        document.getElementById("fname").innerText=cusname;
+
+
         btn.onclick = function () {
+            console.log("button clicked");
             let loanamount = parseInt(document.getElementById("textamount").value);
             let Year = parseInt(document.getElementById("textyear").value);
             // let RateofIntrest = parseFloat(document.getElementById("textintrest").value);
@@ -93,6 +104,7 @@
                 let totalamount = ((loanamount) + ((loanamount * RateofIntrest) / 100) * Year);
                 document.getElementById("divtotal").innerText = totalamount;
             }
+            
 
         }
     </script>
